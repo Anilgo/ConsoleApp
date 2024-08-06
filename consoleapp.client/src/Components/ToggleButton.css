@@ -1,0 +1,17 @@
+/* ToggleButton.css */
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 2; /* Ensure button is above sidebar content */
+}
+
+.toggle-btn:hover {
+    background-color: #555;
+}
