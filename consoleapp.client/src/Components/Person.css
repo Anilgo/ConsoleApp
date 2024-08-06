@@ -1,0 +1,75 @@
+/* Person.css */
+
+/* Styling for the table */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse;
+    margin: 20px 0; /* No left margin, handled by App component */
+    font-size: 18px;
+    text-align: left;
+    table-layout: auto; /* Ensure table layout is flexible */
+}
+
+/* Styling for the table header */
+thead {
+    background-color: #f2f2f2;
+}
+
+thead th {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Ensures the header stays on top */
+    background-color: #f2f2f2; /* To avoid transparency */
+}
+
+/* Styling for the table rows */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 12px;
+}
+
+/* Adding some hover effects */
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design for hiding columns starting from right */
+@media screen and (max-width: 1200px) {
+    th:nth-child(5), td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    th:nth-child(4), td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    th:nth-child(3), td:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    th:nth-child(2), td:nth-child(2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    th:nth-child(1), td:nth-child(1) {
+        display: none;
+    }
+}

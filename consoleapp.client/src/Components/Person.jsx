@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import Table from 'react-bootstrap/Table';
+import './Person.css';
 
 const Person = () => {
 
@@ -19,12 +19,20 @@ const Person = () => {
             company: "Adnan AS"
         },
         {
-            id: 1,
+            id: 3,
             name: "Onur Onuroglu",
             email: "onur@onur.com",
             phoneNumber: 5333333333,
             company: "Osman AS"
         },
+        {
+            id: 4,
+            name: "444",
+            email: "44r@onur.com",
+            phoneNumber: 54444444444,
+            company: "O4444 AS"
+        },
+
     ]
 
     const [data, setData] = useState([]);
@@ -37,11 +45,9 @@ const Person = () => {
 
     return (
         <Fragment>
-            <Table striped bordered hover>
+            <table>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>ID</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone Number</th>
@@ -54,12 +60,12 @@ const Person = () => {
                             data.map((item, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td>{index + 1}</td>
-                                        <td>{item.id}</td>
+
                                         <td>{item.name}</td>
                                         <td>{item.email}</td>
                                         <td>{item.phoneNumber}</td>
                                         <td>{item.company}</td>
+                                        <td>...</td>
                                     </tr>
 
                                 )
@@ -69,7 +75,7 @@ const Person = () => {
                     }
 
                 </tbody>
-            </Table>
+            </table>
         </Fragment>
     )
 }

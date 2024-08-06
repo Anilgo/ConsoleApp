@@ -1,0 +1,58 @@
+/* SidebarMenu.css */
+
+.sidebar {
+    height: 100%; /* Full-height */
+    width: 250px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    padding-top: 20px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+}
+
+.sidebar.closed {
+    transform: translateX(-250px); /* Move sidebar out of view */
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 2; /* Ensure button is above sidebar content */
+}
+
+.toggle-btn:hover {
+    background-color: #555;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
